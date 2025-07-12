@@ -66,13 +66,13 @@ const Navbar = () => {
         <RiMenu5Fill onClick={toggleMenu} size={28} className='md:hidden absolute z-50 right-1 top-[19px]' />
 
         {/* SMALL SCREEN - MENU */}
-        {menuOpen && <div className="flex flex-col w-full h-screen bg-[#111] items-center justify-center gap-4 absolute left-0 top-0 z-10 text-4xl">
+        {menuOpen && <div className="flex flex-col w-full h-screen bg-[#111] items-center justify-center gap-8 absolute left-0 top-0 z-10 text-4xl -mt-10">
           {links.map(link => (
             <Link href={link.href} key={link.id} onClick={()=>setMenuOpen(false)}>
               {link.title}
             </Link>
           ))}
-          <button className="p-2 bg-red-600 rounded text-lg mt-20 flex items-center gap-2 ">
+          <button className="p-2 rounded text-lg mt-4 flex items-center gap-2 ">
             <TbLogout size={20} />
             Logout
           </button>
