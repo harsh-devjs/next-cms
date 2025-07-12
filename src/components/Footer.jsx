@@ -22,7 +22,7 @@ const footerImages = [
 
 const Footer = () => {
     return (
-        <footer className='flex justify-between items-center h-16'>
+        <footer className='flex justify-between items-center h-20'>
             <div className="text-sm">&copy;2025 NextCMS. All rights reserved.</div>
             <div className="flex items-center gap-3">
                 {footerImages.map(img => (
