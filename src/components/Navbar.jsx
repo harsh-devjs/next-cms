@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { RiMenu5Fill } from "react-icons/ri";
 import { TbLogout } from "react-icons/tb";
 
@@ -44,6 +44,14 @@ const Navbar = () => {
   const toggleMenu = () => {
     setMenuOpen(prev => !prev)
   }
+
+  useEffect(()=>{
+    document.body.style.overflow = menuOpen ? 'hidden' : 'auto'
+
+    return () => {
+      document.body.style.overflow = 'auto'
+    }
+  }, [menuOpen])
 
   return (
     <nav className='flex justify-between items-center h-16 relative'>
