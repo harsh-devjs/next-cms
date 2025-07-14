@@ -1,3 +1,4 @@
+import Button from '@/components/Button'
 import Image from 'next/image'
 
 const Home = () => {
@@ -11,9 +12,7 @@ const Home = () => {
           <p className="font-light text-gray-300 text-sm md:text-base lg:text-xl leading-6 tracking-wider">
             Turning your Idea into Reality. We bring together the teams from the global tech industry.
           </p>
-          <button className="py-2 px-3 bg-green-600 text-gray-50 rounded cursor-pointer lg:w-fit lg:text-xl font-light">
-            See Our Works
-          </button>
+          <Button url='/portfolio' text='See Our Works' />
         </div>
       </div>
 
